@@ -5,8 +5,9 @@ const errorPassword = document.getElementById("errorPassword");
 function generarPassword() {
     let characters = "qwertyuiopasdfghjklñzxcvbnm0123456789!#$%&()*+,-./:;<=>?@[\]^_{|}~";
     let pass = "";
+    let longitud = Number(inputPassword.value);
     
-    while (pass.length < 4) {
+    while (pass.length < longitud) {
         let c = Math.floor(Math.random()*characters.length);
         pass += characters[c]
     }
